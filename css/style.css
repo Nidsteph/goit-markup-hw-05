@@ -533,7 +533,7 @@ h1.page-heading {
 
 }
 
-/* The Modal (background) */
+
 .modal {
     display: none;
     /* Hidden by default */
@@ -580,6 +580,7 @@ h1.page-heading {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
 /*BACKGROUND OF THE TITLE*/
