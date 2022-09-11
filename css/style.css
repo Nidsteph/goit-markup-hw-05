@@ -433,10 +433,14 @@ a.logo {
     letter-spacing: 0.02em;
     color: #212121;
 
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigator:hover {
     color: #2196F3;
+
 }
 
 .current-link {
@@ -454,7 +458,13 @@ a.logo {
     display: flex;
     align-items: center;
     padding: 32px 0 31px 0;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
 
 .contact-info:hover {
     color: #2196F3;
@@ -464,12 +474,17 @@ a.logo {
     display: flex;
     margin-right: 10px;
     fill: currentColor;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contact:hover,
 .icon-contact:focus {
     fill: #2196F3;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 
 /*icons of the first list of goals */
@@ -658,7 +673,42 @@ p.team-position {
     color: #757575;
 }
 
+.image-what-we-do {
+    position: relative;
 
+}
+
+.image-wwd {
+    display: flex;
+}
+
+.overlay-wwd {
+    position: absolute;
+    top: 224px;
+    height: 62px;
+    width: 100%;
+    background: rgba(47, 48, 58, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-wwd {
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.image-what-we-do:not(:last-child) {
+    margin-right: 30px;
+}
 
 /* new from down here for the social icons */
 
@@ -692,6 +742,9 @@ li.reg-customer-items:not(:last-child) {
 .reg-customer-items:focus {
     fill: #2196F3;
     border: 1px solid #2196F3;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -779,6 +832,8 @@ ul.contact-info {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters {
@@ -804,6 +859,9 @@ li.filter-item:not(:last-child) {
 
 .button-request:hover {
     background-color: #188CE8;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* portoflio list of images and titles with description */
@@ -823,11 +881,12 @@ li.filter-item:not(:last-child) {
 
 
 .box {
-    position: absolute;
+    display: flex;
 }
 
 .box:hover .overlay {
     transform: translatex(0);
+
 }
 
 .overlay {
@@ -929,12 +988,17 @@ p.headings-text {
     width: 44px;
     color: #AFB1B8;
     border-radius: 50%;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialmedia-link:hover,
 .socialmedia-link:focus {
     background-color: #2196F3;
     color: white;
+    transition-property: background-color;
+
 }
 
 .social-footer-link {
@@ -946,11 +1010,17 @@ p.headings-text {
     color: white;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .social-footer-link:hover,
 .social-footer-link:focus {
     background-color: #2196F3;
+
 }
 
 .footer-container {
@@ -970,6 +1040,10 @@ a.contact-info-footer {
     line-height: 24px;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a.contact-info-footer:hover,
