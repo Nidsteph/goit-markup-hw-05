@@ -465,7 +465,6 @@ a.logo {
 
 }
 
-
 .contact-info:hover {
     color: #2196F3;
 }
@@ -532,8 +531,56 @@ h1.page-heading {
 
     padding: 10px 19px 10px 20px;
 
-
 }
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /*BACKGROUND OF THE TITLE*/
 .hero {
@@ -731,6 +778,9 @@ p.team-position {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li.reg-customer-items:not(:last-child) {
@@ -742,9 +792,7 @@ li.reg-customer-items:not(:last-child) {
 .reg-customer-items:focus {
     fill: #2196F3;
     border: 1px solid #2196F3;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
@@ -823,6 +871,10 @@ ul.contact-info {
     border-radius: 4px;
     padding: 6px 26px;
 
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .list-of-buttons:hover,
@@ -832,8 +884,8 @@ ul.contact-info {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 .filters {
@@ -859,9 +911,11 @@ li.filter-item:not(:last-child) {
 
 .button-request:hover {
     background-color: #188CE8;
+
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 /* portoflio list of images and titles with description */
@@ -881,7 +935,13 @@ li.filter-item:not(:last-child) {
 
 
 .box {
-    display: flex;
+    position: relative;
+
+}
+
+.portfolio-img {
+    display: block;
+    width: 100%;
 }
 
 .box:hover .overlay {
@@ -897,13 +957,20 @@ li.filter-item:not(:last-child) {
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
 
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transform: translatex(-100%);
-    transition: transform ease;
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay>p {
+
     color: #fff;
     padding: 10px;
     margin: 0;
@@ -917,19 +984,14 @@ li.filter-item:not(:last-child) {
 
 }
 
-.overlay code {
-    display: inline-block;
-    padding: 2px 4px;
-    border-radius: 2px;
-    background-color: #fff;
-    color: #2a2a2a;
-}
-
 
 .a-project {
     display: block;
-}
 
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 .a-project:hover,
@@ -1011,7 +1073,7 @@ p.headings-text {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
 
-    transition-property: background-color;
+
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -1020,7 +1082,7 @@ p.headings-text {
 .social-footer-link:hover,
 .social-footer-link:focus {
     background-color: #2196F3;
-
+    transition-property: background-color;
 }
 
 .footer-container {
@@ -1041,7 +1103,7 @@ a.contact-info-footer {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 
-    transition-property: color;
+
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1049,6 +1111,7 @@ a.contact-info-footer {
 a.contact-info-footer:hover,
 a.contact-info-footer:focus {
     color: white;
+    transition-property: color;
 }
 
 .logo-portfolio-footer {
