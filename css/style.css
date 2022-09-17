@@ -531,6 +531,10 @@ h1.page-heading {
 
     padding: 10px 19px 10px 20px;
 
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-container {
@@ -556,13 +560,23 @@ h1.page-heading {
     opacity: 0;
 }
 
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.data-model {
+    visibility: visible;
+    opacity: 100%;
+}
+
 
 /*BACKGROUND OF THE TITLE*/
 .hero {
     padding: 200px 0;
     background-color: #2f303a;
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)), url("/images/background-image.jpg");
+            rgba(47, 48, 58, 0.4)), url("../images/background-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -706,9 +720,9 @@ p.team-position {
 
 .overlay-wwd {
     position: absolute;
-    top: 224px;
-    height: 62px;
     width: 100%;
+    padding: 20px 0;
+    bottom: 0;
     background: rgba(47, 48, 58, 0.8);
     display: flex;
     justify-content: center;
@@ -753,7 +767,7 @@ p.team-position {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 
-    transition-property: fill;
+    transition-property: fill, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -846,7 +860,7 @@ ul.contact-info {
     border-radius: 4px;
     padding: 6px 26px;
 
-    transition-property: color;
+    transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -887,10 +901,6 @@ li.filter-item:not(:last-child) {
 .button-request:hover {
     background-color: #188CE8;
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 /* portoflio list of images and titles with description */
@@ -911,7 +921,7 @@ li.filter-item:not(:last-child) {
 
 .box {
     position: relative;
-
+    overflow: hidden;
 }
 
 .portfolio-img {
@@ -922,18 +932,13 @@ li.filter-item:not(:last-child) {
 
 .overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-    height: 0;
+    top: 100%;
+    height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
 
-    transition: .5s;
-    transition-timing-function: ease;
-
-
-    opacity: 0;
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     display: flex;
     justify-content: center;
@@ -962,20 +967,17 @@ li.filter-item:not(:last-child) {
 }
 
 
+.a-project:hover .overlay,
+.a-project:focus .overlay {
+    top: 0;
+}
+
 .a-project {
     display: block;
 
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-.a-project:hover,
-.a-project:focus {
-    outline: none;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-
 }
 
 
@@ -1028,6 +1030,7 @@ p.headings-text {
     color: #AFB1B8;
     border-radius: 50%;
 
+    transition-property: color, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1036,8 +1039,10 @@ p.headings-text {
 .socialmedia-link:focus {
     background-color: #2196F3;
     color: white;
-    transition-property: background-color;
+}
 
+.circle-social:not(:last-child) {
+    margin-right: 10px;
 }
 
 .social-footer-link {
@@ -1050,7 +1055,7 @@ p.headings-text {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
 
-
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
