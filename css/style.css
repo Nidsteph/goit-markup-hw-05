@@ -557,6 +557,11 @@ h1.page-heading {
     pointer-events: none;
 }
 
+.closing-icon {
+    box-sizing: border-box;
+    position: absolute;
+}
+
 .is-hidden {
     visibility: hidden;
     opacity: 0;
