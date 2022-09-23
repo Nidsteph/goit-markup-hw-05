@@ -62,19 +62,11 @@
               EFFECTIVE SOLUTIONS FOR<br />
               YOUR BUSINESS
             </h1>
-            
-            <!--- DATA MODEL INFO-->
-              <div class="data-modal is-hidden" data-modal></div>
+
+            <!--- DATA MODEL button-->
                 <button data-modal-open class="button button-request" type="button">
                   Request our service
-                </button> 
-                        <button data-modal-close class="is-hidden">
-                            <svg class="closing-icon is-hidden" height="30" width="30">
-                            <use href="./images/icons.svg#icon-close"></use>
-                            </svg>
-                        </button>                    
-              </div>
-  
+                </button>                 
           </div>
         </section>
 
@@ -496,7 +488,20 @@
       </footer>
 
 
-       <script src="./js/modal.js"></script>
+                  <!--- DATA MODEL INFO-->
+   
+      <div class="modal-backdrop" data-modal-open>
+        <div class="data-modal is-hidden" data-modal>
+            <button data-modal-close class="closing-icon-circle">
+              <svg class="closing-icon" height="11" width="11">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>             
+        </div>
+      </div>
+      
+
+    <script src="./js/modal.js"></script>
     </body>
   </div>
 </html>
