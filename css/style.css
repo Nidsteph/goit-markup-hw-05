@@ -596,7 +596,7 @@ h1.page-heading {
 .modal-backdrop {
     position: absolute;
     opacity: 0;
-    background-color: red;
+
     z-index: 1000;
     top: 0;
     right: 0;
@@ -615,18 +615,23 @@ h1.page-heading {
     align-items: center;
     height: 30px;
     width: 30px;
+    right: 11px;
+    top: 8px;
+    position: absolute;
 
     border-radius: 50%;
 
 
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 .closing-icon {
     position: absolute;
     background: #FFFFFF;
     border-radius: 50%;
+    right: 10px;
 
 }
 
